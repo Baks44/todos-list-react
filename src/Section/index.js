@@ -8,7 +8,6 @@ const Section = ({title, body, extraHeaderContent}) => (
                 {extraHeaderContent}
             </div>
         </header>
-
         <div className="section__body">
             {body}
         </div>
