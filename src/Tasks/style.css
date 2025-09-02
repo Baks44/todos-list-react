@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
 }
 
 .tasks__item {
@@ -17,7 +17,7 @@
 }
 
 .tasks__item--hidden {
-  display: none;
+    display: none;
 }
 
 .tasks__content {
@@ -27,12 +27,12 @@
 
 .tasks__button {
     padding: 6px 10px;
-   
+
 }
 
 .tasks__button--toggleDone {
-    width: 30px; 
-    height: 30px; 
+    width: 30px;
+    height: 30px;
     display: inline-flex;
     transition: 1s;
     align-items: center;
@@ -67,4 +67,3 @@
     transition: 1s;
     background-color: rgb(255, 90, 90);
 }
-

@@ -3,19 +3,21 @@
   margin-top: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  border-bottom: 1px solid rgb(171, 168, 168);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.section__body {
+  padding: 20px;
 }
 
 .section__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10px;
+  width: 100%;
   padding-bottom: 20px;
-  
-
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -29,8 +31,6 @@
 .section__title {
   margin: 0;
   font-size: 20px;
-
-
 }
 
 .section__header--with-buttons {
@@ -39,5 +39,4 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  
 }
