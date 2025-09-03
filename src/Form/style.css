@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 10px;
-    
 }
 
 @media(max-width: 767px) {
@@ -13,12 +12,9 @@
 }
 
 .form__input {
-    height: 10px;
     width: 100%;
     max-width: 800px;
-    padding: 18px;
     border: 1px solid rgb(171, 168, 168);
-
 }
 
 
@@ -29,7 +25,6 @@
     background: rgb(0, 128, 128);
     color: white;
     border: none;
-
 }
 
 @media(max-width: 767px) {
