@@ -6,12 +6,19 @@
 
 }
 
+.tasks__list {
+    margin-left: 10px;
+    padding: 0;
+    list-style: none;
+}
+
 .tasks__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     border-bottom: 1px solid #e6e6e6;
     padding: 10px;
+    padding-left: 0;
     gap: 10px;
     width: 100%;
 }
@@ -27,7 +34,6 @@
 
 .tasks__button {
     padding: 6px 10px;
-
 }
 
 .tasks__button--toggleDone {

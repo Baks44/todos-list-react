@@ -2,21 +2,24 @@
   background-color: white;
   margin-top: 20px;
   padding: 20px;
+  position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   padding-bottom: 15px;
   margin-bottom: 15px;
   overflow: hidden;
 }
 
-.section__body {
-  padding: 20px;
+.section__header-line {
+  height: 2px;
+  background-color: rgb(238, 238, 238);
+  margin: 16px 0;
+  width: calc(100% + 40px);
+  margin-left: -20px;
 }
 
 .section__header {
   width: 100%;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid rgb(238, 238, 238);
+  padding-bottom: 10px;
   width: 100%;
 }
 
@@ -25,6 +28,7 @@
     flex-direction: column-reverse;
     align-items: stretch;
   }
+
 
 }
 
