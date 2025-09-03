@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     width: 100%;
-
 }
 
 .tasks__list {
@@ -66,7 +65,6 @@
     transition: 1s;
     color: white;
     border: none;
-
 }
 
 .tasks__button--remove:hover {
