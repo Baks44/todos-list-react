@@ -20,7 +20,6 @@
 .section__header {
   width: 100%;
   padding-bottom: 10px;
-  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -36,9 +35,7 @@
 }
 
 .section__header--with-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: flex;               
+    justify-content: space-between; 
+    align-items: center;        
 }
