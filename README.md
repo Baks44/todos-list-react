@@ -1,5 +1,5 @@
 ﻿# To-do-list
-©2023 Bugs. All rights reserved ©
+©2025 Bugs. All rights reserved ©
 
 ## Introduction
 Welcome to my simple task manager, am glad you are here! You can easily add&delete your done&undone tasks to do. Below you can find some features and information, Enjoy!
@@ -26,8 +26,6 @@ Welcome to my simple task manager, am glad you are here! You can easily add&dele
 
 ### Demo:
 Here you can try by yourself how it works!
-
-https://baks44.github.io/To-do-list/
 
 
 # Task list
