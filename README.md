@@ -25,7 +25,7 @@ Welcome to my simple task manager, am glad you are here! You can easily add&dele
 - If you want to delete task, just click button with bin icon.
 
 ### Demo:
-[Demo]https://baks44.github.io/todos-list-react/
+[Demo](https://baks44.github.io/todos-list-react/)
 Here you can try by yourself how it works!
 
 
