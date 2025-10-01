@@ -6,6 +6,7 @@ Welcome to my simple task manager, am glad you are here! You can easily add&dele
 
 ## Technologies used
 - Alternative box model
+- Normalize.css
 - JavaScript
 - HTML
 - CSS
