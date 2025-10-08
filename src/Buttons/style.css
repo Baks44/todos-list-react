@@ -6,14 +6,10 @@
 }
 
 .buttons__button {
-  background: none;
-  border: none;
   color: teal;
-  font-size: 14px;
-  padding: 10px;
-  cursor: pointer;
-  transition: color 1s;
-  user-select: none;
+  background-color: transparent;
+  border: none;
+  transition: color 0.75s linear;
 }
 
 .buttons__button:hover {
