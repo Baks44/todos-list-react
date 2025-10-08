@@ -19,7 +19,7 @@ function App() {
   };
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id! == id));
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   return (
@@ -34,7 +34,10 @@ function App() {
         title="Lista zadań"
         body={
           <Tasks
-            tasks={tasks} hideDone={hideDone} removeTask={removeTask} />
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+          />
         }
         extraHeaderContent={
           <Buttons
