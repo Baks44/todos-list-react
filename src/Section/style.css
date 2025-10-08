@@ -22,8 +22,10 @@
 
 @media (max-width: 767px) {
   .section__header {
-    flex-direction: column-reverse;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px;
   }
 }
 
