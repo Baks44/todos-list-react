@@ -16,7 +16,7 @@ Welcome to my simple task manager, am glad you are here! You can easily add&dele
 
 ### Preview:
 
-![Demo GIF](images/todos list demo.gif)
+![Demo GIF](images/todos-list-demo.gif)
 
 ### Description:
 - In the field, you can write your task and add by clicking the button next to.
