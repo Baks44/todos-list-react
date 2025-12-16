@@ -9,7 +9,7 @@ import Container from "./Container";
 function App() {
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState([
-    { id: 1, content: "przejść na React", done: false },
+    { id: 1, content: "przejść na React", done: true },
     { id: 2, content: "przenieść to do list", done: true }
 
   ]);
