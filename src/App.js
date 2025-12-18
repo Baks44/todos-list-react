@@ -6,14 +6,16 @@ import Header from "./Header";
 import Container from "./Container";
 import useLocalStorage from "./Hooks/useLocalStorage";
 
+
+const defaultTasks = [
+  { id: 1, content: "przejść na React", done: true },
+  { id: 2, content: "przenieść to do list", done: true },
+  { id: 3, content: "przenieść kalkulator walut", done: true }
+];
+
 function App() {
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
-
-  const [tasks, setTasks] = useLocalStorage("tasks", [
-    { id: 1, content: "przejść na React", done: true },
-    { id: 2, content: "przenieść to do list", done: true },
-    { id: 3, content: "przenieść kalkulator walut", done: true }
-  ]);
+  const [tasks, setTasks] = useLocalStorage("tasks", defaultTasks);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
