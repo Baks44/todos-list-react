@@ -13,6 +13,7 @@ Welcome to my simple task manager, am glad you are here! You can easily add&dele
 - BEM
 - ES6+
 - REACT.js
+- StyledComponents
 
 ### Preview:
 
