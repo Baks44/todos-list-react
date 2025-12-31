@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+
 export const List = styled.ul`
     list-style: none;
     margin: 0;
@@ -21,12 +22,15 @@ export const Item = styled.li`
     `}
 `;
 
-
 export const Content = styled.span`
-    ${({ done }) => done && css`
-        text-decoration: line-through;
-        `}
-        `;
+  color: black;
+${({ done }) =>
+        done &&
+        css`
+    text-decoration: ${({ done }) => done ? "line-through" : "none"};
+    opacity: ${({ done }) => done ? 0.6 : 1};
+  `}
+`;
 
 export const Button = styled.button`
         border:none;

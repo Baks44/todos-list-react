@@ -3,10 +3,9 @@ import { Body, Wrapper } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
     <Wrapper>
-        <Header>
-            <title>{title}</title>
-            {extraHeaderContent}
-        </Header>
+        <Header
+            title={title}
+            extraHeaderContent={extraHeaderContent} />
         <Body>
             {body}
         </Body>

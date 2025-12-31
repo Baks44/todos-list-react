@@ -2,60 +2,29 @@ import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
-import Header from "./Header";
 import Container from "./Container";
 import useLocalStorage from "./Hooks/useLocalStorage";
-
-
-const defaultTasks = [
-  { id: 1, content: "przejść na React", done: true },
-  { id: 2, content: "przenieść to do list", done: true },
-  { id: 3, content: "przenieść kalkulator walut", done: true }
-];
+import useTasks from "./Hooks/useTasks";
+import { PageTitle } from "./Header/styled";
 
 function App() {
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
-  const [tasks, setTasks] = useLocalStorage("tasks", defaultTasks);
+
+  const {
+    tasks,
+    addNewTask,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+  } = useTasks();
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks(tasks =>
-      tasks.map(task =>
-        task.id === id ? { ...task, done: !task.done } : task
-      )
-    );
-  };
-
-  const setAllDone = () => {
-    setTasks(tasks =>
-      tasks.map(task => ({
-        ...task,
-        done: true,
-      }))
-    );
-  };
-
-  const addNewTask = (content) => {
-    setTasks(tasks => [
-      ...tasks,
-      {
-        content,
-        done: false,
-        id: Date.now(),
-      },
-    ]);
-  };
-
   return (
     <Container>
-      <Header title="Lista Zadań" />
+      <PageTitle>Lista Zadań</PageTitle>
 
       <Section
         title="Dodaj nowe zadanie"

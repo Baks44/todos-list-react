@@ -1,5 +1,7 @@
 import { List, Item, Button, Content, } from "./styled";
 
+
+
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
     <List>
         {tasks.map(task => (
@@ -12,13 +14,12 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                     onClick={() => toggleTaskDone(task.id)}>
                     {task.done ? "✓" : "\u00A0"}
                 </Button>
-
-                <Content className={`tasks__content ${task.done ? "tasks__content--done" : ""}`}>
+                <Content done={task.done}>
                     {task.content}
                 </Content>
 
                 <Button
-                    remove  
+                    remove
                     onClick={() => removeTask(task.id)}
                 >
                     🗑

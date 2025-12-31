@@ -7,24 +7,26 @@ export const Wrapper = styled.section`
 `;
 
 export const Header = styled.header`
-    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
 
     @media screen and (max-width: ${({ theme }) => theme.brakepoint.mobileMax}px) {
         grid-template-columns: 1fr;
     }
 `;
 
-export const Tittle = styled.h2`
-    font-size: 20px;
+export const Title = styled.h2`
     margin: 0;
-    `;
+    font-size: 22px;
+    font-weight: 700;
+`;
 
-export const Body =     styled.div`
+
+export const Body = styled.div`
     padding: 20px;
+    border-top: 1px solid ${({ theme }) => theme.color.alto};
     `;
