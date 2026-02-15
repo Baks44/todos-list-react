@@ -1,4 +1,4 @@
-import Header from "../common/Header";
+import Header from "../Header";
 import { Body, Wrapper } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (

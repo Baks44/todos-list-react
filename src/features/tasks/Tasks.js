@@ -1,10 +1,11 @@
 import Form from "./Form";
-import Buttons from "../../Buttons";
-import Section from "../../Section";
+import Buttons from "./Buttons";
+import TasksList from "./TasksList";
+import Header from "../../common/Header";
+import Section from "../../common/Section";
 import Container from "../../common/Container";
 import useLocalStorage from "../../Hooks/useLocalStorage";
 import useTasks from "../../Hooks/useTasks";
-import { PageTitle } from "../../common/Header/styled";
 
 function Tasks() {
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
@@ -18,7 +19,7 @@ function Tasks() {
 
   return (
     <Container>
-      <PageTitle>Lista Zadań</PageTitle>
+      <Header title="Lista Zadań" />
 
       <Section
         title="Dodaj nowe zadanie"
@@ -28,7 +29,7 @@ function Tasks() {
       <Section
         title="Lista zadań"
         body={
-          <Tasks
+          <TasksList
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
