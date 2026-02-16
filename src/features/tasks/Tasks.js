@@ -5,13 +5,13 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Container from "../../common/Container";
 import useLocalStorage from "../../Hooks/useLocalStorage";
-import useTasks from "../../Hooks/useTasks";
+import { useSelector } from "react-redux";
 
 function Tasks() {
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
 
   const { tasks, addNewTask, removeTask, toggleTaskDone, setAllDone } =
-    useTasks();
+    useSelector((state) => state.tasks);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
