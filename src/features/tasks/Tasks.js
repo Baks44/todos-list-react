@@ -5,13 +5,18 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Container from "../../common/Container";
 import useLocalStorage from "../../Hooks/useLocalStorage";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addTask } from "../tasksSlice";
 
 function Tasks() {
+  const dispatch = useDispatch();
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
+  const tasks = useSelector((state) => state.tasks);
 
-  const { tasks, addNewTask, removeTask, toggleTaskDone, setAllDone } =
-    useSelector((state) => state.tasks);
+  const addNewTask = (task) => dispatch(addTask(task));
+  const removeTask = (id) => dispatch(removeTask(id));
+  const toggleTaskDone = (id) => dispatch(toggleTaskDone(id));
+  const setAllDone = () => dispatch(setAllDone());
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
