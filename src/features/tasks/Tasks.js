@@ -6,17 +6,17 @@ import Section from "../../common/Section";
 import Container from "../../common/Container";
 import useLocalStorage from "../../Hooks/useLocalStorage";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask } from "../tasksSlice";
+import { addTask, removeTask, toggleTaskDone, setAllDone } from "./tasksSlice";
 
 function Tasks() {
   const dispatch = useDispatch();
   const [hideDone, setHideDone] = useLocalStorage("hideDone", false);
   const tasks = useSelector((state) => state.tasks);
 
-  const addNewTask = (task) => dispatch(addTask(task));
-  const removeTask = (id) => dispatch(removeTask(id));
-  const toggleTaskDone = (id) => dispatch(toggleTaskDone(id));
-  const setAllDone = () => dispatch(setAllDone());
+  const handleAddTask = (task) => dispatch(addTask(task));
+  const handleRemoveTask = (id) => dispatch(removeTask(id));
+  const handleToggleTaskDone = (id) => dispatch(toggleTaskDone(id));
+  const handleSetAllDone = () => dispatch(setAllDone());
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -28,7 +28,7 @@ function Tasks() {
 
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={<Form addNewTask={handleAddTask} />}
       />
 
       <Section
@@ -37,8 +37,8 @@ function Tasks() {
           <TasksList
             tasks={tasks}
             hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
+            removeTask={handleRemoveTask}
+            toggleTaskDone={handleToggleTaskDone}
           />
         }
         extraHeaderContent={
@@ -46,7 +46,7 @@ function Tasks() {
             tasks={tasks}
             hideDone={hideDone}
             toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
+            setAllDone={handleSetAllDone}
           />
         }
       />
