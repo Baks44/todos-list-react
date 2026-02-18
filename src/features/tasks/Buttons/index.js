@@ -4,7 +4,7 @@ import { setAllDone } from "../tasksSlice";
 
 const Buttons = ({ hideDone, toggleHideDone }) => {
   const dispatch = useDispatch();
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.tasks.items);
 
   return (
     <Wrapper>

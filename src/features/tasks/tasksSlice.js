@@ -2,23 +2,28 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
   name: "tasks",
-  initialState: [],
+  initialState: {
+    items: [],
+    hideDone: false,
+  },
   reducers: {
-    addTask: (tasks, action) => {
-      tasks.push(action.payload);
+    addTask: (state, action) => {
+      state.items.push(action.payload);
     },
-    removeTask: (tasks, action) => {
-      return tasks.filter((task) => task.id !== action.payload);
+
+    removeTask: (state, action) => {
+      state.items = state.items.filter((task) => task.id !== action.payload);
     },
-    toggleTaskDone: (tasks, action) => {
-      const task = tasks.find((task) => task.id === action.payload);
+
+    toggleTaskDone: (state, action) => {
+      const task = state.items.find((task) => task.id === action.payload);
       if (task) {
         task.done = !task.done;
       }
     },
 
-    setAllDone: (tasks) => {
-      tasks.forEach((task) => {
+    setAllDone: (state) => {
+      state.items.forEach((task) => {
         task.done = true;
       });
     },
