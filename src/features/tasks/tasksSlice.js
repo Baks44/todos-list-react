@@ -27,10 +27,19 @@ const tasksSlice = createSlice({
         task.done = true;
       });
     },
+
+    toggleHideDone: (state) => {
+      state.hideDone = !state.hideDone;
+    },
   },
 });
 
-export const { addTask, removeTask, toggleTaskDone, setAllDone } =
-  tasksSlice.actions;
+export const {
+  addTask,
+  removeTask,
+  toggleTaskDone,
+  setAllDone,
+  toggleHideDone,
+} = tasksSlice.actions;
 
 export default tasksSlice.reducer;

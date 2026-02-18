@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeTask, toggleTaskDone } from "../tasksSlice";
 
-const TasksList = ({ hideDone }) => {
+const TasksList = () => {
   const tasks = useSelector((state) => state.tasks.items);
+  const hideDone = useSelector((state) => state.tasks.hideDone);
   const dispatch = useDispatch();
 
   return (
