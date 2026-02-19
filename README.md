@@ -2,7 +2,7 @@
 
 Simple task manager built with React and Redux Toolkit.
 
-©2025 Bugs. All rights reserved.
+©2026 Bugs. All rights reserved.
 
 ## 🚀 Demo
 
