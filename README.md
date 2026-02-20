@@ -25,9 +25,17 @@ Simple task manager built with React and Redux Toolkit.
 - JavaScript ES6+
 - HTML5
 - CSS3
-- BEM
 - Styled Components
 - Normalize.css
+
+## ⚙️ Project structure
+
+- The project uses:
+- feature-based structure
+- Redux Toolkit slice
+- selectors for state access
+- no prop drilling
+- single global store
 
 ## 🖼 Preview
 
