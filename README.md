@@ -26,7 +26,6 @@ Simple task manager built with React and Redux Toolkit.
 - HTML5
 - CSS3
 - Styled Components
-- Normalize.css
 
 ## ⚙️ Project structure
 
@@ -48,6 +47,10 @@ Simple task manager built with React and Redux Toolkit.
 - Hide completed tasks with **"Ukryj ukończone"**
 - Mark all tasks done with **"Ukończ wszystkie"**
 - Remove a task using the bin icon
+
+## 🤔 Why Redux Toolkit?
+
+- This app uses Redux Toolkit to manage global app state in a scalable way, replacing local state and avoiding prop drilling.
 
 ## ▶️ Run locally
 
