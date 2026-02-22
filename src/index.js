@@ -17,7 +17,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <App />
         </BrowserRouter>
       </Provider>
