@@ -7,16 +7,16 @@ const tasksSlice = createSlice({
     hideDone: false,
   },
   reducers: {
-    addTask: (state, action) => {
-      state.tasks.push(action.payload);
+    addTask: (state, { payload: task }) => {
+      state.tasks.push(task);
     },
 
-    removeTask: (state, action) => {
-      state.tasks = state.tasks.filter((task) => task.id !== action.payload);
+    removeTask: (state, { payload: taskId }) => {
+      state.tasks = state.tasks.filter((task) => task.id !== taskId);
     },
 
-    toggleTaskDone: (state, action) => {
-      const task = state.tasks.find((task) => task.id === action.payload);
+    toggleTaskDone: (state, { payload: taskId }) => {
+      const task = state.tasks.find((task) => task.id === taskId);
       if (task) {
         task.done = !task.done;
       }
