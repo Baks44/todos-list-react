@@ -5,7 +5,7 @@ import Tasks from "./features/tasks/Tasks";
 export const App = () => (
   <Routes>
     <Route path="/" element={<Tasks />} />
-    <Route path="/About" element={<About />} />
+    <Route path="/about" element={<About />} />
     <Route path="*" element={<Tasks />} />
   </Routes>
 );
