@@ -6,6 +6,7 @@ import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { theme } from "./theme";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import { store } from "./store";
 
 // Create the root using ReactDOM.createRoot
@@ -16,7 +17,9 @@ root.render(
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Provider store={store}>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </Provider>
     </ThemeProvider>
   </React.StrictMode>,
