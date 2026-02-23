@@ -12,8 +12,9 @@ const About = () => (
         <>
           <p>Nazywam się: Bugs44</p>
           <p>
-            To jest moja aplikacja Todo List zbudowana przy użyciu React i Redux
-            Toolkit.
+            Jestem na początku swojej drogi jako programista i codziennie uczę
+            się czegoś nowego. Poza kodem - samochody, mocne brzmienia i rzeczy,
+            które mają charakter. Nuda to nie moja bajka.
           </p>
         </>
       }
