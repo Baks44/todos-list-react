@@ -42,8 +42,19 @@ export const {
   toggleHideDone,
 } = tasksSlice.actions;
 
-export const selectTasksState = (state) => state.tasks;
 export const selectTasks = (state) => state.tasks.tasks;
 export const selectHideDone = (state) => state.tasks.hideDone;
+
+export const selectFilteredTasks = (state, query) => {
+  const tasks = selectTasks(state);
+
+  if (!query) {
+    return tasks;
+  }
+
+  return tasks.filter((task) =>
+    task.content.toLowerCase().includes(query.toLowerCase()),
+  );
+};
 
 export default tasksSlice.reducer;
