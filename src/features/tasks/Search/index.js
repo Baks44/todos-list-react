@@ -1,21 +1,15 @@
-import { useSearchParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setQuery, selectQuery } from "./searchSlice.js";
 
 const Search = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const query = searchParams.get("search") || "";
-
-  const onInputChange = ({ target }) => {
-    setSearchParams({
-      search: target.value,
-    });
-  };
+  const query = useSelector(selectQuery);
+  const dispatch = useDispatch();
 
   return (
     <input
-      placeholder="Szukaj zadania..."
       value={query}
-      onChange={onInputChange}
+      onChange={(e) => dispatch(setQuery(e.target.value))}
+      placeholder="Filtruj zadania..."
     />
   );
 };

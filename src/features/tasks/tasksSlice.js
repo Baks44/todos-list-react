@@ -31,6 +31,8 @@ const tasksSlice = createSlice({
     toggleHideDone: (state) => {
       state.hideDone = !state.hideDone;
     },
+
+    fetchExampleTasks: () => {},
   },
 });
 
@@ -48,7 +50,7 @@ export const selectHideDone = (state) => state.tasks.hideDone;
 export const selectFilteredTasks = (state, query) => {
   const tasks = selectTasks(state);
 
-  if (!query) {
+  if (!query || query.trim() === "") {
     return tasks;
   }
 
@@ -56,5 +58,7 @@ export const selectFilteredTasks = (state, query) => {
     task.content.toLowerCase().includes(query.toLowerCase()),
   );
 };
+
+export const selectQuery = (state) => state.search.query;
 
 export default tasksSlice.reducer;
