@@ -1,3 +1,4 @@
+import { Input } from "../Buttons/styled";
 import { useDispatch, useSelector } from "react-redux";
 import { setQuery, selectQuery } from "./searchSlice.js";
 
@@ -6,10 +7,10 @@ const Search = () => {
   const dispatch = useDispatch();
 
   return (
-    <input
-      value={query}
-      onChange={(e) => dispatch(setQuery(e.target.value))}
+    <Input
       placeholder="Filtruj zadania..."
+      value={query}
+      onChange={({ target }) => dispatch(setQuery(target.value))}
     />
   );
 };
