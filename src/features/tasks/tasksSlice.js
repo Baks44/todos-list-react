@@ -2,10 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
   name: "tasks",
+
   initialState: {
     tasks: [],
     hideDone: false,
+    loading: false,
   },
+
   reducers: {
     addTask: (state, { payload: task }) => {
       state.tasks.push(task);
@@ -32,7 +35,14 @@ const tasksSlice = createSlice({
       state.hideDone = !state.hideDone;
     },
 
-    fetchExampleTasks: () => {},
+    fetchExampleTasks: (state) => {
+      state.loading = true;
+    },
+
+    fetchExampleTasksSuccess: (state, { payload }) => {
+      state.tasks = payload;
+      state.loading = false;
+    },
   },
 });
 
@@ -42,10 +52,13 @@ export const {
   toggleTaskDone,
   setAllDone,
   toggleHideDone,
+  fetchExampleTasks,
+  fetchExampleTasksSuccess,
 } = tasksSlice.actions;
 
 export const selectTasks = (state) => state.tasks.tasks;
 export const selectHideDone = (state) => state.tasks.hideDone;
+export const selectLoading = (state) => state.tasks.loading;
 
 export const selectFilteredTasks = (state, query) => {
   const tasks = selectTasks(state);

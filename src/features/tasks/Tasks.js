@@ -7,23 +7,38 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Container from "../../common/Container";
 
-const Tasks = () => (
-  <Container>
-    <Header title="Lista Zadań" />
+import { useDispatch } from "react-redux";
+import { fetchExampleTasks } from "./tasksSlice";
 
-    <Section title="Dodaj nowe zadanie" body={<Form />} />
+const Tasks = () => {
+  const dispatch = useDispatch();
 
-    <Section
-      title="Lista zadań"
-      body={
-        <>
-          <Search />
-          <TasksList />
-        </>
-      }
-      extraHeaderContent={<Buttons />}
-    />
-  </Container>
-);
+  return (
+    <Container>
+      <Header title="Lista Zadań" />
+
+      <Section
+        title="Dodaj nowe zadanie"
+        body={<Form />}
+        extraHeaderContent={
+          <button onClick={() => dispatch(fetchExampleTasks())}>
+            Pobierz przykładowe zadania
+          </button>
+        }
+      />
+
+      <Section
+        title="Lista zadań"
+        body={
+          <>
+            <Search />
+            <TasksList />
+          </>
+        }
+        extraHeaderContent={<Buttons />}
+      />
+    </Container>
+  );
+};
 
 export default Tasks;
