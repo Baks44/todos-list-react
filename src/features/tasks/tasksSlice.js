@@ -1,3 +1,4 @@
+// Tasks slice – manages tasks state and selectors
 import { createSlice } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
@@ -63,15 +64,15 @@ export const selectLoading = (state) => state.tasks.loading;
 export const selectFilteredTasks = (state, query) => {
   const tasks = selectTasks(state);
 
-  if (!query || query.trim() === "") {
+  if (!query?.trim()) {
     return tasks;
   }
 
+  const normalizedQuery = query.trim().toLowerCase();
+
   return tasks.filter((task) =>
-    task.content.toLowerCase().includes(query.toLowerCase()),
+    task.content.toLowerCase().includes(normalizedQuery),
   );
 };
-
-export const selectQuery = (state) => state.search.query;
 
 export default tasksSlice.reducer;

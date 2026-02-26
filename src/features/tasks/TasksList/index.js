@@ -1,13 +1,12 @@
 import { List, Item, Button, Content } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { selectQuery } from "../Search/searchSlice";
 import {
   removeTask,
   toggleTaskDone,
   selectHideDone,
   selectFilteredTasks,
-  selectQuery,
 } from "../tasksSlice";
 
 const TasksList = () => {
