@@ -31,7 +31,7 @@ export const StyledNavLink = styled(NavLink)`
   }
 
   &:hover {
-    background: ${({ theme }) => theme.color.lightTeal};
+    background: ${({ theme }) => theme.color.teal};
     color: white;
   }
 `;
