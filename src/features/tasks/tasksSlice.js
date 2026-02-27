@@ -1,11 +1,13 @@
 // Tasks slice – manages tasks state and selectors
 import { createSlice } from "@reduxjs/toolkit";
 
+const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
 const tasksSlice = createSlice({
   name: "tasks",
 
   initialState: {
-    tasks: [],
+    tasks: savedTasks,
     hideDone: false,
     loading: false,
   },

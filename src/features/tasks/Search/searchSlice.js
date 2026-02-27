@@ -1,3 +1,4 @@
+// Search slice – manages search query state
 import { createSlice } from "@reduxjs/toolkit";
 
 const searchSlice = createSlice({
