@@ -13,7 +13,7 @@ import { fetchExampleTasks, selectLoading } from "./tasksSlice";
 
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import { setQuery } from "./searchSlice";
+import { setQuery } from "./Search/searchSlice";
 
 const Tasks = () => {
   const dispatch = useDispatch();
