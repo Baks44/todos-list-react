@@ -11,9 +11,20 @@ import Container from "../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectLoading } from "./tasksSlice";
 
+import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
+import { setQuery } from "./searchSlice";
+
 const Tasks = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoading);
+
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const search = searchParams.get("search") || "";
+    dispatch(setQuery(search));
+  }, [searchParams, dispatch]);
 
   return (
     <Container>
