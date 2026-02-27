@@ -1,9 +1,11 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import Container from "../../../common/Container";
+
+import { BackLink } from "./styled";
 
 const TaskPage = () => {
   const { id } = useParams();
@@ -34,7 +36,7 @@ const TaskPage = () => {
               <strong>{task.done ? "Ukończone" : "Nieukończone"}</strong>
             </p>
 
-            <Link to="/">← Powrót do listy</Link>
+            <BackLink to="/">← Powrót do listy</BackLink>
           </>
         }
       />
