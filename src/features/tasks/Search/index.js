@@ -14,9 +14,13 @@ const Search = () => {
 
     dispatch(setQuery(value));
 
-    setSearchParams({
-      search: value,
-    });
+    if (value.trim() === "") {
+      setSearchParams({});
+    } else {
+      setSearchParams({
+        search: value,
+      });
+    }
   };
 
   return (
